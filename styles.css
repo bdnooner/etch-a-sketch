@@ -1,15 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
 .container{
-    width: 100vw;
-    height: 100vh;
-    border: 2px;
-    border-style: solid;
-    border-color: black;
-    display: flexbox;
-    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+
 }
 
 .grid-box {
-    border: 1px;
+    border: 0px;
     border-style: solid;
     border-color: black;
+    background-color: blue;
+    flex: 1 1 1;
 }

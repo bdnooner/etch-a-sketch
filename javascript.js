@@ -1,4 +1,4 @@
-const rows = 100;
+const rows = 64;
 const container_height = window.innerWidth - 16;
 const num_boxes = rows * rows;
 
@@ -16,8 +16,6 @@ function createGrid(rows, num_boxes) {
     div.style.width = container_height / rows + "px";
     div.style.height = container_height / rows + "px";
 
-    console.log(div.style.width);
-
     container.appendChild(div);
 
     container.addEventListener("mouseover", (event) => {
@@ -32,4 +30,6 @@ const button = document.querySelector("button");
 button.addEventListener("click", (event) => {
     let userRows = prompt("How many rows/columns do you want to have?");
     container.replaceChildren();
+
+    createGrid(userRows, (userRows * userRows));
 });
